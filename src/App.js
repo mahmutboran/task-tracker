@@ -31,8 +31,7 @@ function App() {
 
   //!ADDTASK
   const addTask = (newTask) => {
-    const id = (tasks.slice(-1)[0].id)+1
-  
+    const id = tasks.length>0 ? (tasks.slice(-1)[0].id)+1 : 1
     const addNewTask = { id, ...newTask }
     setTasks([...tasks, addNewTask])
   }
